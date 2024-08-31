@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Icon } from "@heroicons/react/24/outline";
+import { CheckIcon } from "@heroicons/react/20/solid";
 
 export default function ContactForm() {
   const [name, setName] = React.useState(null);
@@ -71,19 +73,21 @@ export default function ContactForm() {
 
   async function Submitted(e) {
     if (isFormValid) {
-      console.log(data);
       setSubmit(true);
-      e.preventDefault();
+      // e.preventDefault();
 
       try {
-        await axios.post("http://localhost:8000/contact-us", {
-          name,
-          email,
-          phone,
-          subject,
-          message,
-          // body,
-        });
+        await axios.post(
+          "https://waps-tech-hive-server.vercel.app/contact-us",
+          {
+            name,
+            email,
+            phone,
+            subject,
+            message,
+            // body,
+          }
+        );
       } catch (e) {
         console.log(e);
       }
@@ -104,8 +108,11 @@ export default function ContactForm() {
     >
       <h6 className=" font-bold self-center mb-3">Contact Form</h6>
       {submit == true && (
-        <div className="text-green-600 font-semibold self-center mb-3 text-lg">
-          Form Sumitted Successfully
+        <div className="text-green-600 font-semibold self-center mb-3 text-lg flex flex-col justify-center content-center">
+          <div className="border-green-600 self-center content-center flex justify-center rounded-full border-5 w-fit p-2 mb-3">
+            <CheckIcon aria-hidden="true" className="h-24 w-24" />
+          </div>
+          <h6>Form Sumitted Successfully</h6>
         </div>
       )}
       {submit == false && (
@@ -177,7 +184,11 @@ export default function ContactForm() {
           </div>
         </>
       )}
-
+      {isFormValid && submit == false && (
+        <div className="text-green-600 self-center text-sm font-semibold">
+          Form validated, Submit now
+        </div>
+      )}
       {submit == false && (
         <button
           onClick={Submitted}
