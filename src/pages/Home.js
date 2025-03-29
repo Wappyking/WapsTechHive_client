@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Navbar page="home" />
 
-      <main class="  bg-gradient-to-b from-black via-sky-500 to-white h-auto w-screen pb-10 flex flex-wrap pt-28">
+      <main class="  bg-gradient-to-b from-black via-sky-500 to-white h-auto w-screen pb-10 flex flex-wrap pt-28 ">
         <div
           className=" flex"
           data-aos="fade-right"
