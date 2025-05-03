@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ScrollAnimation from "react-animate-on-scroll";
 import Aos from "aos";
+import AdsComponent from "../components/AdsComponent";
 
 export default function Home() {
   useEffect(() => {
@@ -12,8 +13,9 @@ export default function Home() {
   return (
     <>
       <Navbar page="home" />
+      <AdsComponent />
 
-      <main class="  bg-gradient-to-b from-black via-sky-500 to-white h-auto w-screen pb-10 flex flex-wrap pt-28 ">
+      <main class="  bg-gradient-to-b from-black via-sky-500 to-white h-auto pb-10 flex flex-wrap pt-28">
         <div
           className=" flex"
           data-aos="fade-right"

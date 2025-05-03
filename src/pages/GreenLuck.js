@@ -17,11 +17,11 @@ export default function GreenLuck() {
        bg-gradient-to-b
        from-black to-sky-500 
        flex-wrap flex  
-       h-auto w-screen 
+       h-screen w-screen 
        pb-32 flex-col 
        justify-center  
        content-center 
-       pt-20"
+       pt-20 flex-1"
       >
         <div
           className="

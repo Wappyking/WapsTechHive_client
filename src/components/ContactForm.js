@@ -77,7 +77,7 @@ export default function ContactForm() {
       // e.preventDefault();
 
       try {
-        await axios.post(
+        let response = await axios.post(
           "https://waps-tech-hive-server.vercel.app/contact-us",
           {
             name,
@@ -88,6 +88,7 @@ export default function ContactForm() {
             // body,
           }
         );
+        console.log("response is", response);
       } catch (e) {
         console.log(e);
       }

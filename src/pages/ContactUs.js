@@ -10,7 +10,7 @@ export default function ContactUs() {
       <Navbar page="contact us" />
       <div
         className="pt-28 
-      h-auto 
+      h-screen 
       bg-gradient-to-b
        from-black 
        to-sky-500 flex 
