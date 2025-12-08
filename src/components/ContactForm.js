@@ -102,10 +102,10 @@ export default function ContactForm() {
       className="flex 
   flex-col 
   content-center 
-  gap-3 p-10 bg-sky-200
+  gap-3 p-4 sm:p-10 bg-sky-200
    lg:w-2/3 self-center 
    rounded-lg mb-10 
-   flex-wrap md:w-96 sm:w-96 w-96"
+   flex-wrap w-full max-w-full overflow-x-hidden"
     >
       <h6 className=" font-bold self-center mb-3">Contact Form</h6>
       {submit == true && (
@@ -118,12 +118,12 @@ export default function ContactForm() {
       )}
       {submit == false && (
         <>
-          <div className="gap-3 flex flex-wrap content-center justify-center">
-            <div className="flex flex-col">
+          <div className="gap-3 flex flex-wrap content-center justify-center w-full">
+            <div className="flex flex-col w-full sm:w-80">
               <input
                 // type="text"
                 type="string"
-                className="w-80 self-center p-2 rounded-lg"
+                className="w-full p-2 rounded-lg"
                 placeholder="Your Name"
                 value={submit == false ? name : ""}
                 onChange={(e) => setName(e.target.value)}
@@ -132,10 +132,10 @@ export default function ContactForm() {
                 {errors.name}
               </div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col w-full sm:w-80">
               <input
                 type="text"
-                className="w-80 self-center p-2 rounded-lg"
+                className="w-full p-2 rounded-lg"
                 placeholder="Your Email"
                 value={submit == false ? email : ""}
                 onChange={(e) => setEmail(e.target.value)}
@@ -145,11 +145,11 @@ export default function ContactForm() {
               </div>
             </div>
           </div>
-          <div className="gap-3 flex flex-wrap justify-center">
-            <div className="flex flex-col">
+          <div className="gap-3 flex flex-wrap justify-center w-full">
+            <div className="flex flex-col w-full sm:w-80">
               <input
                 type="text"
-                className="w-80 self-center p-2 rounded-lg"
+                className="w-full p-2 rounded-lg"
                 placeholder="Your Phone Number"
                 value={submit == false ? phone : ""}
                 onChange={(e) => setPhone(e.target.value)}
@@ -159,10 +159,10 @@ export default function ContactForm() {
               </div>
             </div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col w-full sm:w-80">
               <input
                 type="text"
-                className="w-80 self-center p-2 rounded-lg"
+                className="w-full p-2 rounded-lg"
                 placeholder="Subject"
                 value={submit == false ? subject : ""}
                 onChange={(e) => setSubject(e.target.value)}
@@ -172,9 +172,9 @@ export default function ContactForm() {
               </div>
             </div>
           </div>
-          <div className="self-center lg:w-2/3 flex flex-col w-80">
+          <div className="self-center lg:w-2/3 flex flex-col w-full">
             <textarea
-              className=" w-100 self-center p-2 rounded-lg"
+              className=" w-full self-center p-2 rounded-lg"
               placeholder="Message"
               value={submit == false ? message : ""}
               onChange={(e) => setMessage(e.target.value)}

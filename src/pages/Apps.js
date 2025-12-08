@@ -16,14 +16,14 @@ export default function Apps() {
   return (
     <>
       <Navbar page="project" />
-      <div className="pt-28 h-screen bg-gradient-to-b from-black to-sky-500 flex flex-col gap-10 content-center">
+      <div className="pt-28 h-screen bg-gradient-to-b from-black to-sky-500 flex flex-col gap-10 content-center px-2">
         <h6
           style={{
             fontSize: 30,
             color: "white",
             alignSelf: "center",
           }}
-          className="font-bold w-96 text-center"
+          className="font-bold w-full sm:w-96 text-center"
         >
           APPS
         </h6>
@@ -33,7 +33,7 @@ export default function Apps() {
 
             color: "white",
           }}
-          className="w-96 px-2 text-center"
+          className="w-full sm:w-96 px-2 text-center"
         >
           At Waps Tech Hive, we pride ourselves on creating applications that
           cater to your various range of needs. Our portfolio includes:
@@ -41,8 +41,8 @@ export default function Apps() {
 
         <div className="flex content-center justify-center">
           <div
-            className="flex flex-row content-center gap-3  justify-between items-center
-        bg-gradient-to-r from-sky-500 to-white m-3 p-2 lg:w-2/3 rounded-2xl px-3 border-2 border-black border-solid"
+            className="flex flex-col sm:flex-row content-center gap-3 justify-between items-center
+        bg-gradient-to-r from-sky-500 to-white m-3 p-2 w-full sm:lg:w-2/3 rounded-2xl px-3 border-2 border-black border-solid"
             data-aos="fade-right"
             data-aos-duration="900"
           >
@@ -53,13 +53,14 @@ export default function Apps() {
               </h6>
             </div>
 
-            <Link
+            <a
               className="text-center font-bold  bg-green-700 p-2 text-white rounded-2xl"
-              to="/green-luck-app"
+              href="https://greenlucktips.com/download-app"
+              target="_blank"
             >
               {" "}
-              See More
-            </Link>
+              Download
+            </a>
           </div>
         </div>
       </div>
