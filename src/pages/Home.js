@@ -13,9 +13,8 @@ export default function Home() {
   return (
     <>
       <Navbar page="home" />
-      <AdsComponent />
 
-      <main class="bg-gradient-to-b from-black via-sky-500 to-white h-auto pb-10 flex flex-wrap pt-28 overflow-x-hidden w-screen">
+      <main class="bg-gradient-to-b from-black via-sky-500 to-white h-auto flex flex-wrap pt-16 overflow-x-hidden w-screen">
         <div
           className="flex w-full md:w-1/3 pr-5 max-w-full"
           data-aos="fade-right"

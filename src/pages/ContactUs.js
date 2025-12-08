@@ -9,7 +9,7 @@ export default function ContactUs() {
     <>
       <Navbar page="contact us" />
       <div
-        className="pt-28 
+        className="pt-16 sm:pt-28
       min-h-screen 
       bg-gradient-to-b
        from-black 
